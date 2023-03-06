@@ -1,5 +1,5 @@
 import './style.css'
-import { setupInput } from './counter'
+import { setupBtnSql ,setupBtnArray} from './counter'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -7,7 +7,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <input placeholder="string" type="text" id="txtString" />
 	<input placeholder="lineas" type="number" id="txtLines" />
 	<button id="btnSplitTxt">Crear sql</button>
+	<div>
+		<input placeholder="array coordenadas" type="text" id="txtArrCoords" />
+		<button id="btnArrayCoords">Crear Array Coordenadas</button>
+	</div>
   </div>
 `
 
-setupInput(document.querySelector<HTMLButtonElement>('#btnSplitTxt')!)
+setupBtnSql(document.querySelector<HTMLButtonElement>('#btnSplitTxt')!)
+setupBtnArray(document.querySelector<HTMLButtonElement>('#btnArrayCoords')!)
